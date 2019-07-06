@@ -1,0 +1,6 @@
+numpy==1.15.4
+pandas==0.23.0
+dash==1.0.0  # The core dash backend
+dash-daq==0.1.0  # DAQ components (newly open-sourced!)
+gunicorn
+

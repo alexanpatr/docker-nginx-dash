@@ -1,0 +1,16 @@
+version: '3'
+services:
+  dash_app:
+    build: ./dash_app
+    restart: always
+    volumes:
+      - "./dash_app:/app"
+  dash_nginx: 
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - dash_app
